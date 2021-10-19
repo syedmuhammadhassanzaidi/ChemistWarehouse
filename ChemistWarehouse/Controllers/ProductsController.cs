@@ -30,9 +30,10 @@ namespace ChemistWarehouse.Controllers
 
         // GET api/<Products>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IEnumerable<Product> Get(int id)
         {
-            return "value";
+            var result = _context.Products.Find(id);
+            yield return result;
         }
 
         // POST api/<Products>
