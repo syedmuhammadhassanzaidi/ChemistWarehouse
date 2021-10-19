@@ -102,10 +102,10 @@ export class Home extends Component {
                                   <Table.Cell>{products.price}</Table.Cell>
                                   <Table.Cell>{products.productType}</Table.Cell>
                                   <Table.Cell>
-                                      <Button color='yellow' onClick={() => this.deleteData(products.id)}>Edit</Button>
+                                      <Button color='yellow' onClick={() => this.editData(products.id)}>Edit</Button>
                                   </Table.Cell>
                                   <Table.Cell>
-                                      <Button negative onClick={() => this.editData(products.id, products.productName, products.price, products.productType, products.active)}>Delete</Button>
+                                      <Button negative onClick={() => this.deleteData(products.id, products.productName, products.price, products.productType, products.active)}>Delete</Button>
                                   </Table.Cell>
                               </Table.Row>
                           )
