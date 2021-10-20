@@ -81,10 +81,9 @@ export class AddProduct extends Component {
         }
         else
         {
-            console.log(this.state.fields["name"]);
-            console.log(this.state.fields["price"]);
-            console.log(this.state.fields["type"]);
-            //alert("Form has errors.");
+            console.log(this.state.errors["name"]);
+            console.log(this.state.errors["price"]);
+            console.log(this.state.errors["type"]);
         }
     }
 
@@ -116,7 +115,7 @@ export class AddProduct extends Component {
                             <br /><br />
                         </fieldset>
                         <br />
-                        <Button primary onClick={() => this.addData()}>Submit</Button>
+                        <Button primary onClick={() => this.addData()}>Add</Button>
                     </div>
                 </form>
             </div>

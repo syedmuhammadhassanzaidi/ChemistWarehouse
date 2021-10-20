@@ -9,6 +9,7 @@ export class EditProduct extends Component {
     render() {
         return (
             <div className="app-container">
+                <h1>Edit Product</h1>
             </div>
         );
     }

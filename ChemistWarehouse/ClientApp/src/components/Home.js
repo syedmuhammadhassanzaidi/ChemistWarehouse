@@ -3,6 +3,7 @@ import { Table, Button } from 'semantic-ui-react';
 import $ from 'jquery';
 import { useHistory, Link } from 'react-router-dom';
 import EditProduct from './EditProduct';
+import { NavLink } from 'reactstrap';
 
 export class Home extends Component {
     static displayName = Home.name;
@@ -76,6 +77,15 @@ export class Home extends Component {
         });
     }
 
+    app()
+    {
+        let history = useHistory();
+
+        const redirect = () => {
+            history.push('/edit-product');
+        }
+    }
+
   render () {
       return (
         <div className="app-container">
@@ -102,6 +112,7 @@ export class Home extends Component {
                                   <Table.Cell>{products.price}</Table.Cell>
                                   <Table.Cell>{products.productType}</Table.Cell>
                                   <Table.Cell>
+                                      {/*<NavLink tag={Link} className="inactive" to="edit-product">Edit</NavLink>*/}
                                       <Button color='yellow' onClick={() => this.editData(products.id)}>Edit</Button>
                                   </Table.Cell>
                                   <Table.Cell>
